@@ -1,0 +1,47 @@
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="192" height="192">
+  <defs>
+    <radialGradient id="coin" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#f4d03f"/>
+      <stop offset="45%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#8b6914"/>
+    </radialGradient>
+    <radialGradient id="shine" cx="30%" cy="25%" r="40%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="6" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.4"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fundo escuro -->
+  <rect width="512" height="512" fill="#0a0e17"/>
+  
+  <!-- Moeda -->
+  <g filter="url(#shadow)">
+    <circle cx="256" cy="256" r="210" fill="url(#coin)" stroke="#8b6914" stroke-width="4"/>
+    <!-- Borda interna tracejada -->
+    <circle cx="256" cy="256" r="185" fill="none" stroke="#3d2a00" stroke-width="2" stroke-dasharray="8 6" opacity="0.5"/>
+    <!-- Brilho -->
+    <circle cx="256" cy="256" r="210" fill="url(#shine)"/>
+  </g>
+  
+  <!-- Letra V -->
+  <text x="256" y="320" font-family="Georgia, serif" font-size="240" font-weight="900" 
+        fill="#3d2a00" text-anchor="middle" opacity="0.9">V</text>
+  
+  <!-- Texto circular superior -->
+  <path id="topArc" d="M 90,256 A 166,166 0 0 1 422,256" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#3d2a00" letter-spacing="4">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">VANGUARD</textPath>
+  </text>
+  
+  <!-- Texto circular inferior -->
+  <path id="bottomArc" d="M 90,256 A 166,166 0 0 0 422,256" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#3d2a00" letter-spacing="3">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">★ FINANCE ★</textPath>
+  </text>
+</svg>
