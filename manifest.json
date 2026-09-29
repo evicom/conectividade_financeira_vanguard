@@ -1,0 +1,73 @@
+{
+  "name": "Conectividade Financeira Vanguard",
+  "short_name": "Vanguard",
+  "description": "Inteligência financeira com IA: cotações, bolsa, loterias, crypto e previsões esportivas em tempo real.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0e17",
+  "theme_color": "#d4af37",
+  "lang": "pt-BR",
+  "categories": ["finance", "business", "productivity"],
+  "icons": [
+    {
+      "src": "/assets/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icon-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ver Cotações",
+      "short_name": "Cotações",
+      "description": "Abrir dashboard de cotações",
+      "url": "/index.html#dashboard",
+      "icons": [{ "src": "/assets/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Loterias IA",
+      "short_name": "Loterias",
+      "description": "Gerar jogos com IA",
+      "url": "/index.html#loterias",
+      "icons": [{ "src": "/assets/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Bitcoin",
+      "short_name": "BTC",
+      "description": "Ver cotação do Bitcoin",
+      "url": "/index.html#crypto",
+      "icons": [{ "src": "/assets/icon-192.svg", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "handle_links": "preferred",
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
